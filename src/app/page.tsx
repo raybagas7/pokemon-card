@@ -1,5 +1,4 @@
 'use client';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { useQuery } from '@tanstack/react-query';
 import { GraphQLClient, gql } from 'graphql-request';
 
@@ -13,7 +12,6 @@ interface Gen3Species {
 }
 
 export default function Home() {
-  const queryClient = new QueryClient();
   const graphQLClient = new GraphQLClient(
     'https://beta.pokeapi.co/graphql/v1beta'
   );
